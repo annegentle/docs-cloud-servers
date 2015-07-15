@@ -83,17 +83,17 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|addresses                 |object *(Required)*      |A container for one or   |
+|addresses                 |object                   |A container for one or   |
 |                          |                         |more server details to   |
 |                          |                         |be updated.              |
 +--------------------------+-------------------------+-------------------------+
-|nettype                   |object *(Required)*      |An array of ``private``  |
+|nettype                   |object                   |An array of ``private``  |
 |                          |                         |or ``public`` network    |
 |                          |                         |address containers.      |
 +--------------------------+-------------------------+-------------------------+
-|addr                      |object *(Required)*      |The IP address.          |
+|addr                      |object                   |The IP address.          |
 +--------------------------+-------------------------+-------------------------+
-|version                   |object *(Required)*      |The IP address version,  |
+|version                   |object                   |The IP address version,  |
 |                          |                         |either ``4`` or ``6``.   |
 +--------------------------+-------------------------+-------------------------+
 

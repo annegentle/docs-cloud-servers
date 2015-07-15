@@ -14,7 +14,7 @@ Retrieve Image Details
 
 Retrieves details of a specified image.
 
-Specify the image ID as id in the URI.
+Specify the image ID in the URI.
 
 This operation returns details of the specified image in the response body. The image_type field in the response indicates whether the image is built-in ``(base)`` or custom ``(snapshot)``.
 
@@ -82,6 +82,73 @@ Response
 ^^^^^^^^^^^^^^^^^^
 
 
+This table shows the body parameters for the response:
+
++--------------------------+-------------------------+-------------------------+
+|Name                      |Type                     |Description              |
++==========================+=========================+=========================+
+|image                     |object                   |The container of image   |
+|                          |                         |details.                 |
++--------------------------+-------------------------+-------------------------+
+|status                    |xsd:string               |The image status, like   |
+|                          |                         |``ACTIVE``.              |
++--------------------------+-------------------------+-------------------------+
+|updated                   |xsd:date                 |The date and time that   |
+|                          |                         |the image was last       |
+|                          |                         |updated.                 |
++--------------------------+-------------------------+-------------------------+
+|links                     |xsd:string               |The array of image links |
+|                          |                         |for self and bookmark.   |
++--------------------------+-------------------------+-------------------------+
+|href                      |csapi:UUID               |The URL for the image    |
+|                          |                         |and the associated       |
+|                          |                         |``rel``.                 |
++--------------------------+-------------------------+-------------------------+
+|rel                       |csapi:UUID               |The descriptive field    |
+|                          |                         |for the associated       |
+|                          |                         |``href``, which is       |
+|                          |                         |either ``self``,         |
+|                          |                         |``bookmark``, or         |
+|                          |                         |``alternate``.           |
++--------------------------+-------------------------+-------------------------+
+|type                      |csapi:UUID               |The alternate image type.|
++--------------------------+-------------------------+-------------------------+
+|OS-DCF:diskConfig         |xsd:string               |The disk configuration   |
+|                          |                         |value. Valid values are  |
+|                          |                         |``AUTO`` and ``MANUAL``. |
++--------------------------+-------------------------+-------------------------+
+|id                        |csapi:UUID               |The image ID.            |
++--------------------------+-------------------------+-------------------------+
+|OS-EXT-IMG-SIZE:size      |xsd:string               |The image size.          |
++--------------------------+-------------------------+-------------------------+
+|name                      |xsd:string               |The image name.          |
++--------------------------+-------------------------+-------------------------+
+|created                   |xsd:date                 |The date and time that   |
+|                          |                         |the image was created.   |
++--------------------------+-------------------------+-------------------------+
+|minDisk                   |xsd:int                  |The minimum number of    |
+|                          |                         |gigabytes of disk        |
+|                          |                         |storage.                 |
++--------------------------+-------------------------+-------------------------+
+|server                    |object                   |The container of server  |
+|                          |                         |attributes for the image.|
++--------------------------+-------------------------+-------------------------+
+|progress                  |xsd:int                  |The completion           |
+|                          |                         |percentage for an image. |
+|                          |                         |``100`` indicates the    |
+|                          |                         |image build is completed.|
++--------------------------+-------------------------+-------------------------+
+|minRam                    |xsd:int                  |The specified minimum    |
+|                          |                         |amount of RAM in         |
+|                          |                         |megabytes.               |
++--------------------------+-------------------------+-------------------------+
+|metadata                  |array                    |Array of metadata key    |
+|                          |                         |pairs containing         |
+|                          |                         |information about the    |
+|                          |                         |image.                   |
++--------------------------+-------------------------+-------------------------+
+
+
 
 
 
@@ -90,5 +157,5 @@ Response
 
 .. code::
 
-    {"image": {"OS-DCF:diskConfig": "AUTO","created": "2012-02-28T19:38:57Z","id": "3afe97b2-26dc-49c5-a2cc-a2fc8d80c001","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/010101/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/010101/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001","rel": "bookmark"},{"href": "https://dfw.servers.api.rackspacecloud.com/010101/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001","rel": "alternate","type": "application/vnd.openstack.image"}],"metadata": {"arch": "x86-64","auto_disk_config": "True","com.rackspace__1__build_core": "1","com.rackspace__1__build_managed": "0","com.rackspace__1__build_rackconnect": "0","com.rackspace__1__options": "0","com.rackspace__1__visible_core": "1","com.rackspace__1__visible_managed": "0","com.rackspace__1__visible_rackconnect": "0","image_type": "base","org.openstack__1__architecture": "x64","org.openstack__1__os_distro": "org.ubuntu","org.openstack__1__os_version": "11.10","os_distro": "ubuntu","os_type": "linux","os_version": "11.10","rax_managed": "false","rax_options": "0"},"minDisk": 10,"minRam": 256,"name": "Ubuntu 11.10","progress": 100,"status": "ACTIVE","updated": "2012-02-28T19:39:05Z"}}
+    Status Code: 200 OKContent-Length: 2230Content-Type: application/jsonDate: Thu, 09 Jul 2015 18:24:01 GMT, Thu, 09 Jul 2015 18:24:02 GMTServer: Jetty(9.2.z-SNAPSHOT)Via: 1.1 Repose (Repose/6.2.1.2)X-Compute-Request-Id: req-5ba3fae8-5daf-48c7-9be1-6de842e50ca9
 

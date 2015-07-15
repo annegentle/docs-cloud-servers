@@ -68,19 +68,19 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|keypairs                  |array *(Required)*       |An array of key pairs.   |
+|keypairs                  |array                    |An array of key pairs.   |
 +--------------------------+-------------------------+-------------------------+
-|keypairs                  |object *(Required)*      |A container of key pair  |
+|keypairs                  |object                   |A container of key pair  |
 |                          |                         |details.                 |
 +--------------------------+-------------------------+-------------------------+
-|fingerprint               |string *(Required)*      |A short sequence of      |
+|fingerprint               |string                   |A short sequence of      |
 |                          |                         |bytes used to            |
 |                          |                         |authenticate, or look    |
 |                          |                         |up, a longer public key. |
 +--------------------------+-------------------------+-------------------------+
-|name                      |string *(Required)*      |The name of the key pair.|
+|name                      |string                   |The name of the key pair.|
 +--------------------------+-------------------------+-------------------------+
-|public_key                |string *(Required)*      |The public ssh key value.|
+|public_key                |string                   |The public ssh key value.|
 +--------------------------+-------------------------+-------------------------+
 
 

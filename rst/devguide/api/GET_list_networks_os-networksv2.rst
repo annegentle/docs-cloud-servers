@@ -70,16 +70,16 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|networks                  |array *(Required)*       |An array of networks.    |
+|networks                  |array                    |An array of networks.    |
 +--------------------------+-------------------------+-------------------------+
-|cidr                      |xsd:string *(Required)*  |The CIDR for an isolated |
+|cidr                      |xsd:string               |The CIDR for an isolated |
 |                          |                         |network. This parameter  |
 |                          |                         |is not included for      |
 |                          |                         |PublicNet and ServiceNet.|
 +--------------------------+-------------------------+-------------------------+
-|id                        |xsd:string *(Required)*  |The network ID.          |
+|id                        |xsd:string               |The network ID.          |
 +--------------------------+-------------------------+-------------------------+
-|label                     |xsd:string *(Required)*  |The name of the network. |
+|label                     |xsd:string               |The name of the network. |
 |                          |                         |ServiceNet is labeled as |
 |                          |                         |private, and PublicNet   |
 |                          |                         |is labeled as public in  |

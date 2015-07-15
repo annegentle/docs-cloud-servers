@@ -42,6 +42,8 @@ If you use ``{"rescue": "none"}`` in the request body, the API will attempt to b
 
 If, instead, you use ``{"rescue": {"rescue_image_ref": " < imageID > "}}``, the API uses the specified image for the rescue mode instance. This is extremely useful if the image originally used to build the server is now either non-functional or has been deleted.
 
+The following extension provides additional rescue with image functionality.
+
 
 
 This table shows the possible response codes for this operation:
@@ -128,7 +130,7 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|adminPass                 |object *(Required)*      |The new adminstrator     |
+|adminPass                 |object                   |The new adminstrator     |
 |                          |                         |password.                |
 +--------------------------+-------------------------+-------------------------+
 

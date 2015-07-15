@@ -78,7 +78,7 @@ This table shows the body parameters for the request:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|meta                      |object *(Required)*      |Container for a metadata |
+|meta                      |object                   |Container for a metadata |
 |                          |                         |keypair for the          |
 |                          |                         |specified server. This   |
 |                          |                         |container holds a single |
@@ -86,7 +86,7 @@ This table shows the body parameters for the request:
 |                          |                         |"metadata key" :         |
 |                          |                         |"metadata value".        |
 +--------------------------+-------------------------+-------------------------+
-|keyname                   |keypair *(Required)*     |Keypair describing the   |
+|keyname                   |keypair                  |Keypair describing the   |
 |                          |                         |metadata using format of |
 |                          |                         |"keyname" : "keyvalue".  |
 +--------------------------+-------------------------+-------------------------+
@@ -112,7 +112,7 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|metadata                  |object *(Required)*      |Container for a metadata |
+|metadata                  |object                   |Container for a metadata |
 |                          |                         |keypair for the          |
 |                          |                         |specified server. This   |
 |                          |                         |container holds one or   |
@@ -120,7 +120,7 @@ This table shows the body parameters for the response:
 |                          |                         |format of "metadata key" |
 |                          |                         |: "metadata value".      |
 +--------------------------+-------------------------+-------------------------+
-|keyname                   |keypair *(Required)*     |Keypairs edcribing the   |
+|keyname                   |keypair                  |Keypairs edcribing the   |
 |                          |                         |metadata using format of |
 |                          |                         |"keyname" : "keyvalue".  |
 +--------------------------+-------------------------+-------------------------+

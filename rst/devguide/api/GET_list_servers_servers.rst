@@ -132,28 +132,28 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|id                        |csapi:UUID *(Required)*  |The ID of the server.    |
+|id                        |csapi:UUID               |The ID of the server.    |
 +--------------------------+-------------------------+-------------------------+
-|links                     |csapi:UUID *(Required)*  |An array of the self and |
+|links                     |csapi:UUID               |An array of the self and |
 |                          |                         |bookmark links to the    |
 |                          |                         |server.                  |
 +--------------------------+-------------------------+-------------------------+
-|href                      |csapi:UUID *(Required)*  |The URL for the server   |
+|href                      |csapi:UUID               |The URL for the server   |
 |                          |                         |and the associated       |
 |                          |                         |``rel``.                 |
 +--------------------------+-------------------------+-------------------------+
-|rel                       |csapi:UUID *(Required)*  |The descriptive field    |
+|rel                       |csapi:UUID               |The descriptive field    |
 |                          |                         |for the associated       |
 |                          |                         |``href``, which is       |
 |                          |                         |either ``self`` or       |
 |                          |                         |``bookmark``.            |
 +--------------------------+-------------------------+-------------------------+
-|name                      |csapi:string *(Required)*|The server name.         |
+|name                      |csapi:string             |The server name.         |
 +--------------------------+-------------------------+-------------------------+
-|next                      |xsd:anyURI *(Required)*  |Moves to the next        |
+|next                      |xsd:anyURI               |Moves to the next        |
 |                          |                         |metadata item.           |
 +--------------------------+-------------------------+-------------------------+
-|previous                  |xsd:anyURI *(Required)*  |Moves to the previous    |
+|previous                  |xsd:anyURI               |Moves to the previous    |
 |                          |                         |metadata item.           |
 +--------------------------+-------------------------+-------------------------+
 

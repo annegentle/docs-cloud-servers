@@ -85,21 +85,21 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|volumeAttachemnts         |array *(Required)*       |The array of attached    |
+|volumeAttachemnts         |array                    |The array of attached    |
 |                          |                         |volumes.                 |
 +--------------------------+-------------------------+-------------------------+
-|device                    |xsd:string *(Required)*  |The name of the device,  |
+|device                    |xsd:string               |The name of the device,  |
 |                          |                         |such as /dev/xvdb.       |
 +--------------------------+-------------------------+-------------------------+
-|Id                        |xsd:string *(Required)*  |The ID of the volume     |
+|Id                        |xsd:string               |The ID of the volume     |
 |                          |                         |attached to the server   |
 |                          |                         |instance.                |
 +--------------------------+-------------------------+-------------------------+
-|serverId                  |xsd:string *(Required)*  |The ID of the server     |
+|serverId                  |xsd:string               |The ID of the server     |
 |                          |                         |instance to which the    |
 |                          |                         |volume is attached.      |
 +--------------------------+-------------------------+-------------------------+
-|volumeId                  |xsd:string *(Required)*  |The ID of the volume     |
+|volumeId                  |xsd:string               |The ID of the volume     |
 |                          |                         |attached to the server   |
 |                          |                         |instance.                |
 +--------------------------+-------------------------+-------------------------+

@@ -59,8 +59,65 @@ Request
 
 
 
+**Example Retrieve List Of Rate And Absolute Limits: JSON request**
+
+
+.. code::
+
+    X-Auth-Token: f064c46a782c444cb4ba4b6434288f7cContent-Type: application/jsonAccept: application/json
+
+
 Response
 ^^^^^^^^^^^^^^^^^^
+
+
+This table shows the body parameters for the response:
+
++--------------------------+-------------------------+-------------------------+
+|Name                      |Type                     |Description              |
++==========================+=========================+=========================+
+|limits                    |object                   |The container of limits  |
+|                          |                         |attributes.              |
++--------------------------+-------------------------+-------------------------+
+|absolute                  |object                   |The container of         |
+|                          |                         |absolute limits          |
+|                          |                         |attributes.              |
++--------------------------+-------------------------+-------------------------+
+|maxTotalSnapshots         |xsd:int                  |The maximum number of    |
+|                          |                         |snapshots.               |
++--------------------------+-------------------------+-------------------------+
+|totalSnapshotsUsed        |xsd:int                  |The total number of      |
+|                          |                         |snapshots used.          |
++--------------------------+-------------------------+-------------------------+
+|maxTotalVolumeGigabytes   |xsd:int                  |The maximum total size   |
+|                          |                         |of volumes, in gibibytes |
+|                          |                         |(GiB).                   |
++--------------------------+-------------------------+-------------------------+
+|totalGigabytesUsed        |xsd:int                  |The total number of      |
+|                          |                         |gibibytes (GiB) used.    |
++--------------------------+-------------------------+-------------------------+
+|maxTotalVolumes           |xsd:int                  |The maximum number of    |
+|                          |                         |volumes.                 |
++--------------------------+-------------------------+-------------------------+
+|totalVolumessUsed         |xsd:int                  |The total number of      |
+|                          |                         |volumes used.            |
++--------------------------+-------------------------+-------------------------+
+|rate                      |array                    |The array of rate        |
+|                          |                         |objects.                 |
++--------------------------+-------------------------+-------------------------+
+|limit                     |array                    |The array of rate limit  |
+|                          |                         |objects.                 |
++--------------------------+-------------------------+-------------------------+
+|next-available            |date                     |The next available rate  |
+|                          |                         |limit date and time.     |
++--------------------------+-------------------------+-------------------------+
+|remaining                 |date                     |The time remaining for   |
+|                          |                         |the rate limit in units. |
++--------------------------+-------------------------+-------------------------+
+|unit                      |date                     |The type of unit for the |
+|                          |                         |rate limit. For example, |
+|                          |                         |``DAY`` or ``MINUTE``.   |
++--------------------------+-------------------------+-------------------------+
 
 
 
@@ -72,12 +129,4 @@ Response
 .. code::
 
     Status Code: 200 OKContent-Length: 3010Content-Type: application/jsonDate: Wed, 18 Mar 2015 20:23:18 GMT, Wed, 18 Mar 2015 20:23:19 GMTServer: Jetty(9.2.z-SNAPSHOT)Via: 1.1 Repose (Repose/6.2.1.2)X-Compute-Request-Id: req-48d05db0-dd97-4aef-87f2-11177ab8c262
-
-
-**Example Retrieve List Of Rate And Absolute Limits: XML request**
-
-
-.. code::
-
-    Status Code: 200 OKContent-Length: 3487Content-Type: application/xmlDate: Wed, 18 Mar 2015 20:25:34 GMT, Wed, 18 Mar 2015 20:25:34 GMTServer: Jetty(9.2.z-SNAPSHOT)Via: 1.1 Repose (Repose/6.2.1.2)X-Compute-Request-Id: req-dabc55be-d34e-4ddf-bc6a-d169b13fa570
 

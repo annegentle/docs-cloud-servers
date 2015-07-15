@@ -153,30 +153,30 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|server                    |csapi:object *(Required)*|The container for server |
+|server                    |csapi:object             |The container for server |
 |                          |                         |data.                    |
 +--------------------------+-------------------------+-------------------------+
-|id                        |csapi:UUID *(Required)*  |The ID of the server.    |
+|id                        |csapi:UUID               |The ID of the server.    |
 +--------------------------+-------------------------+-------------------------+
-|links                     |csapi:UUID *(Required)*  |An array of the self and |
+|links                     |csapi:UUID               |An array of the self and |
 |                          |                         |bookmark links to the    |
 |                          |                         |server.                  |
 +--------------------------+-------------------------+-------------------------+
-|href                      |csapi:UUID *(Required)*  |The URL for the server   |
+|href                      |csapi:UUID               |The URL for the server   |
 |                          |                         |and the associated       |
 |                          |                         |``rel``.                 |
 +--------------------------+-------------------------+-------------------------+
-|rel                       |csapi:UUID *(Required)*  |The descriptive field    |
+|rel                       |csapi:UUID               |The descriptive field    |
 |                          |                         |for the associated       |
 |                          |                         |``href``, which is       |
 |                          |                         |either ``self`` or       |
 |                          |                         |``bookmark``.            |
 +--------------------------+-------------------------+-------------------------+
-|adminPass                 |csapi:string *(Required)*|The password assigned to |
+|adminPass                 |csapi:string             |The password assigned to |
 |                          |                         |provide login access to  |
 |                          |                         |the server.              |
 +--------------------------+-------------------------+-------------------------+
-|OS-DCF:diskConfig         |csapi:string *(Required)*|The disk configuration   |
+|OS-DCF:diskConfig         |csapi:string             |The disk configuration   |
 |                          |                         |value. Valid values are  |
 |                          |                         |``AUTO`` and ``MANUAL``. |
 +--------------------------+-------------------------+-------------------------+

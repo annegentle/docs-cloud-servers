@@ -91,22 +91,22 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|keypair                   |object *(Required)*      |The container for the    |
+|keypair                   |object                   |The container for the    |
 |                          |                         |key pair details.        |
 +--------------------------+-------------------------+-------------------------+
-|fingerprint               |string *(Required)*      |A short sequence of      |
+|fingerprint               |string                   |A short sequence of      |
 |                          |                         |bytes used to            |
 |                          |                         |authenticate, or look    |
 |                          |                         |up, a longer public key. |
 +--------------------------+-------------------------+-------------------------+
-|name                      |string *(Required)*      |The name of the key pair.|
+|name                      |string                   |The name of the key pair.|
 +--------------------------+-------------------------+-------------------------+
-|private_key               |string *(Required)*      |The private ssh key      |
+|private_key               |string                   |The private ssh key      |
 |                          |                         |value.                   |
 +--------------------------+-------------------------+-------------------------+
-|public_key                |string *(Required)*      |The public ssh key value.|
+|public_key                |string                   |The public ssh key value.|
 +--------------------------+-------------------------+-------------------------+
-|user_id                   |string *(Required)*      |The ID of the user.      |
+|user_id                   |string                   |The ID of the user.      |
 +--------------------------+-------------------------+-------------------------+
 
 

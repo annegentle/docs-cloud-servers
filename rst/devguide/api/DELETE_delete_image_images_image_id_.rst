@@ -16,7 +16,7 @@ Deletes the specified image.
 
 This operation deletes the specified image from the system. Images are immediately removed.
 
-Specify the image ID as id in the URI.
+Specify the image ID in the URI.
 
 
 
@@ -81,4 +81,12 @@ Response
 
 
 
+
+
+**Example Delete Image: JSON request**
+
+
+.. code::
+
+    Status Code: 204 No ContentContent-Type: text/html; charset=UTF-8Date: Thu, 09 Jul 2015 18:52:29 GMT, Thu, 09 Jul 2015 18:52:30 GMTServer: Jetty(9.2.z-SNAPSHOT)Via: 1.1 Repose (Repose/6.2.1.2)X-Compute-Request-Id: req-e1b75723-1027-48c0-aeea-008a9b038370
 

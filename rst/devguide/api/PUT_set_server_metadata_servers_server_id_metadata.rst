@@ -14,7 +14,9 @@ Set Server Metadata
 
 Create or replace metadata items for a specified server
 
-You can add one or more new metadata items in a single request.
+You can add or update one or more new metadata items in a single request.
+
+If metadata items in the request body do not exist, they are created. If they do exist, they are replaced.
 
 Existing metadata items are replaced with the ones provided in the request regardless of the names of the original metadata items.
 
@@ -76,7 +78,7 @@ This table shows the body parameters for the request:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|metadata                  |object *(Required)*      |Container for a metadata |
+|metadata                  |object                   |Container for a metadata |
 |                          |                         |keypair for the          |
 |                          |                         |specified server. This   |
 |                          |                         |container holds one or   |
@@ -84,7 +86,7 @@ This table shows the body parameters for the request:
 |                          |                         |format of "metadata key" |
 |                          |                         |: "metadata value".      |
 +--------------------------+-------------------------+-------------------------+
-|keyname                   |keypair *(Required)*     |Keypairs edcribing the   |
+|keyname                   |keypair                  |Keypairs edcribing the   |
 |                          |                         |metadata using format of |
 |                          |                         |"keyname" : "keyvalue".  |
 +--------------------------+-------------------------+-------------------------+
@@ -110,7 +112,7 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|metadata                  |object *(Required)*      |Container for a metadata |
+|metadata                  |object                   |Container for a metadata |
 |                          |                         |keypair for the          |
 |                          |                         |specified server. This   |
 |                          |                         |container holds one or   |
@@ -118,7 +120,7 @@ This table shows the body parameters for the response:
 |                          |                         |format of "metadata key" |
 |                          |                         |: "metadata value".      |
 +--------------------------+-------------------------+-------------------------+
-|keyname                   |keypair *(Required)*     |Keypairs edcribing the   |
+|keyname                   |keypair                  |Keypairs edcribing the   |
 |                          |                         |metadata using format of |
 |                          |                         |"keyname" : "keyvalue".  |
 +--------------------------+-------------------------+-------------------------+

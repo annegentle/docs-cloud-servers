@@ -85,24 +85,24 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|volumeAttachemnt          |object *(Required)*      |The container for the    |
+|volumeAttachemnt          |object                   |The container for the    |
 |                          |                         |volume attachemnt        |
 |                          |                         |specifications.          |
 +--------------------------+-------------------------+-------------------------+
-|device                    |xsd:string *(Required)*  |The name of the device,  |
+|device                    |xsd:string               |The name of the device,  |
 |                          |                         |such as /dev/xvdb.       |
 |                          |                         |Specify ``null`` for     |
 |                          |                         |auto-assignment.         |
 +--------------------------+-------------------------+-------------------------+
-|Id                        |xsd:string *(Required)*  |The ID of the volume     |
+|Id                        |xsd:string               |The ID of the volume     |
 |                          |                         |that you attached to the |
 |                          |                         |server instance.         |
 +--------------------------+-------------------------+-------------------------+
-|serverId                  |xsd:string *(Required)*  |The ID of the server     |
+|serverId                  |xsd:string               |The ID of the server     |
 |                          |                         |instance to which you    |
 |                          |                         |attached the volume.     |
 +--------------------------+-------------------------+-------------------------+
-|volumeId                  |xsd:string *(Required)*  |The ID of the volume     |
+|volumeId                  |xsd:string               |The ID of the volume     |
 |                          |                         |that you attached to the |
 |                          |                         |server instance.         |
 +--------------------------+-------------------------+-------------------------+

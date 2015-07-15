@@ -16,22 +16,6 @@ Retrieves IDs, names, and links for all available flavors.
 
 This operation lists information for all available flavors.
 
-To filter the list of flavors returned in the response body, you can specify the following optional URI parameters:
-
-``minDisk=minDiskInGB``
-
-Filters the list of flavors to those with the specified minimum number of gigabytes of disk storage.
-
-``minRam=minRamInMB``
-
-Filters the list of flavors to those with the specified minimum amount of RAM in megabytes.
-
-``marker=markerID``
-
-``limit=int``
-
-Sets the page size. See `Section 1.3, Paginated Collections" <None>`__ / >
-
 
 
 This table shows the possible response codes for this operation:
@@ -70,6 +54,30 @@ Request
 
 
 
+This table shows the query parameters for the request:
+
++--------------------------+-------------------------+-------------------------+
+|Name                      |Type                     |Description              |
++==========================+=========================+=========================+
+|minDisk                   |xsd:int *(Required)*     |Filters the list of      |
+|                          |                         |flavors to those with    |
+|                          |                         |the specified minimum    |
+|                          |                         |number of gigabytes of   |
+|                          |                         |disk storage.            |
++--------------------------+-------------------------+-------------------------+
+|minRam                    |xsd:int *(Required)*     |Filters the list of      |
+|                          |                         |flavors to those with    |
+|                          |                         |the specified minimum    |
+|                          |                         |amount of RAM in         |
+|                          |                         |megabytes.               |
++--------------------------+-------------------------+-------------------------+
+|marker                    |xsd:string *(Required)*  |The ID of the last item  |
+|                          |                         |in the previous list.    |
++--------------------------+-------------------------+-------------------------+
+|limit                     |xsd:int *(Required)*     |Sets the page size.      |
++--------------------------+-------------------------+-------------------------+
+
+
 
 
 
@@ -87,6 +95,33 @@ Response
 ^^^^^^^^^^^^^^^^^^
 
 
+This table shows the body parameters for the response:
+
++--------------------------+-------------------------+-------------------------+
+|Name                      |Type                     |Description              |
++==========================+=========================+=========================+
+|flavors                   |array                    |The array of flavors.    |
++--------------------------+-------------------------+-------------------------+
+|id                        |xsd:string               |The flavor ID.           |
++--------------------------+-------------------------+-------------------------+
+|links                     |xsd:string               |The array of flavor      |
+|                          |                         |links for self and       |
+|                          |                         |bookmark.                |
++--------------------------+-------------------------+-------------------------+
+|href                      |csapi:UUID               |The URL for the flavor   |
+|                          |                         |and the associated       |
+|                          |                         |``rel``.                 |
++--------------------------+-------------------------+-------------------------+
+|rel                       |csapi:UUID               |The descriptive field    |
+|                          |                         |for the associated       |
+|                          |                         |``href``, which is       |
+|                          |                         |either ``self`` or       |
+|                          |                         |``bookmark``.            |
++--------------------------+-------------------------+-------------------------+
+|name                      |xsd:string               |The flavor name.         |
++--------------------------+-------------------------+-------------------------+
+
+
 
 
 
@@ -95,5 +130,5 @@ Response
 
 .. code::
 
-    {"flavors": [{"id": "2","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/2","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/2","rel": "bookmark"}],"name": "512MB Standard Instance"},{"id": "3","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/3","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/3","rel": "bookmark"}],"name": "1GB Standard Instance"},{"id": "4","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/4","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/4","rel": "bookmark"}],"name": "2GB Standard Instance"},{"id": "5","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/5","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/5","rel": "bookmark"}],"name": "4GB Standard Instance"},{"id": "6","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/6","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/6","rel": "bookmark"}],"name": "8GB Standard Instance"},{"id": "7","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/7","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/7","rel": "bookmark"}],"name": "15GB Standard Instance"},{"id": "8","links": [{"href": "https://dfw.servers.api.rackspacecloud.com/v2/453265/flavors/8","rel": "self"},{"href": "https://dfw.servers.api.rackspacecloud.com/453265/flavors/8","rel": "bookmark"}],"name": "30GB Standard Instance"}]}
+    Status Code: 200 OKContent-Length: 9132Content-Type: application/jsonDate: Wed, 08 Jul 2015 21:33:49 GMT, Wed, 08 Jul 2015 21:33:49 GMTServer: Jetty(9.2.z-SNAPSHOT)Via: 1.1 Repose (Repose/6.2.1.2)X-Compute-Request-Id: req-dbb15502-9620-450b-a05e-63e291595a89
 

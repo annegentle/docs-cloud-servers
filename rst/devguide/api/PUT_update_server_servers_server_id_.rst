@@ -108,37 +108,37 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|server                    |object *(Required)*      |A container of server    |
+|server                    |object                   |A container of server    |
 |                          |                         |details.                 |
 +--------------------------+-------------------------+-------------------------+
-|accessIPv4                |csapi:IP *(Required)*    |The public IP version 4  |
+|accessIPv4                |csapi:IP                 |The public IP version 4  |
 |                          |                         |access address.          |
 +--------------------------+-------------------------+-------------------------+
-|accessIPv6                |csapi:IP *(Required)*    |The public IP version 6  |
+|accessIPv6                |csapi:IP                 |The public IP version 6  |
 |                          |                         |access address.          |
 +--------------------------+-------------------------+-------------------------+
-|addresses                 |array *(Required)*       |An array of addresses    |
+|addresses                 |array                    |An array of addresses    |
 |                          |                         |for public, private, and |
 |                          |                         |isolated networks        |
 |                          |                         |attached to the server.  |
 +--------------------------+-------------------------+-------------------------+
-|addr                      |array *(Required)*       |The IP address of the    |
+|addr                      |array                    |The IP address of the    |
 |                          |                         |network.                 |
 +--------------------------+-------------------------+-------------------------+
-|version                   |array *(Required)*       |The version of the IP    |
+|version                   |array                    |The version of the IP    |
 |                          |                         |address of the network.  |
 +--------------------------+-------------------------+-------------------------+
-|id                        |csapi:UUID *(Required)*  |The ID of the server.    |
+|id                        |csapi:UUID               |The ID of the server.    |
 +--------------------------+-------------------------+-------------------------+
-|created                   |csapi:UUID *(Required)*  |The time stamp           |
+|created                   |csapi:UUID               |The time stamp           |
 |                          |                         |indicating the creation  |
 |                          |                         |date of the server.      |
 +--------------------------+-------------------------+-------------------------+
-|flavor                    |csapi:UUID *(Required)*  |The flavor ID.           |
+|flavor                    |csapi:UUID               |The flavor ID.           |
 +--------------------------+-------------------------+-------------------------+
-|image                     |csapi:UUID *(Required)*  |The image ID.            |
+|image                     |csapi:UUID               |The image ID.            |
 +--------------------------+-------------------------+-------------------------+
-|hostId                    |csapi:UUID *(Required)*  |The host ID. The compute |
+|hostId                    |csapi:UUID               |The host ID. The compute |
 |                          |                         |provisioning algorithm   |
 |                          |                         |has an anti-affinity     |
 |                          |                         |property that attempts   |
@@ -158,64 +158,75 @@ This table shows the body parameters for the response:
 |                          |                         |account and is not       |
 |                          |                         |globally unique.         |
 +--------------------------+-------------------------+-------------------------+
-|links                     |csapi:UUID *(Required)*  |An array of the self and |
+|links                     |csapi:UUID               |An array of the self and |
 |                          |                         |bookmark links to the    |
 |                          |                         |server.                  |
 +--------------------------+-------------------------+-------------------------+
-|href                      |csapi:UUID *(Required)*  |The URL for the server   |
+|href                      |csapi:UUID               |The URL for the server   |
 |                          |                         |and the associated       |
 |                          |                         |``rel``.                 |
 +--------------------------+-------------------------+-------------------------+
-|rel                       |csapi:UUID *(Required)*  |The descriptive field    |
+|rel                       |csapi:UUID               |The descriptive field    |
 |                          |                         |for the associated       |
 |                          |                         |``href``, which is       |
 |                          |                         |either ``self`` or       |
 |                          |                         |``bookmark``.            |
 +--------------------------+-------------------------+-------------------------+
-|metadata                  |csapi:string *(Required)*|Any metadata key and     |
+|metadata                  |csapi:string             |Any metadata key and     |
 |                          |                         |value pairs.             |
 +--------------------------+-------------------------+-------------------------+
-|name                      |csapi:string *(Required)*|The server name.         |
+|name                      |csapi:string             |The server name.         |
 +--------------------------+-------------------------+-------------------------+
-|progress                  |csapi:string *(Required)*|The build completion     |
+|progress                  |csapi:string             |The build completion     |
 |                          |                         |progress, as a           |
 |                          |                         |percentage. Value ranges |
 |                          |                         |from ``0`` to ``100``.   |
 +--------------------------+-------------------------+-------------------------+
-|status                    |csapi:string *(Required)*|The status of the        |
+|status                    |csapi:string             |The status of the        |
 |                          |                         |server. For a full list  |
 |                          |                         |of possible status       |
 |                          |                         |values, see.             |
 +--------------------------+-------------------------+-------------------------+
-|tenant_id                 |csapi:string *(Required)*|The tenant ID.           |
+|tenant_id                 |csapi:string             |The tenant ID.           |
 +--------------------------+-------------------------+-------------------------+
-|updated                   |csapi:string *(Required)*|The time stamp of the    |
+|updated                   |csapi:string             |The time stamp of the    |
 |                          |                         |last update.             |
 +--------------------------+-------------------------+-------------------------+
-|user_id                   |csapi:string *(Required)*|The user ID.             |
+|user_id                   |csapi:string             |The user ID.             |
 +--------------------------+-------------------------+-------------------------+
-|OS-DCF:diskConfig         |csapi:string *(Required)*|Extended attribute: The  |
+|OS-DCF:diskConfig         |csapi:string             |Extended attribute: The  |
 |                          |                         |disk configuration       |
 |                          |                         |value. Valid values are  |
 |                          |                         |``AUTO`` and ``MANUAL``. |
 +--------------------------+-------------------------+-------------------------+
-|RAX-SI:image_schedule     |csapi:string *(Required)*|Extended attribute: The  |
+|RAX-SI:image_schedule     |csapi:string             |Extended attribute: The  |
 |                          |                         |image schedule reference |
 |                          |                         |is included only if      |
 |                          |                         |scheduled images has     |
 |                          |                         |been enabled for this    |
 |                          |                         |server.                  |
 +--------------------------+-------------------------+-------------------------+
-|OS-EXT-STS                |csapi:string *(Required)*|Extended attribute.      |
+|OS-EXT-STS                |csapi:string             |Extended attribute.      |
 |                          |                         |Shows the extended       |
 |                          |                         |statuses for the server, |
 |                          |                         |including the VM, task,  |
 |                          |                         |and power states.        |
 +--------------------------+-------------------------+-------------------------+
-|next                      |xsd:anyURI *(Required)*  |Moves to the next        |
+|RAX-PUBLIC-IP-ZONE-       |xsd:UUID                 |Extended attribute.      |
+|ID:publicIPZoneId         |                         |Enables booting the      |
+|                          |                         |server from a volume     |
+|                          |                         |when additional          |
+|                          |                         |parameters are given. If |
+|                          |                         |specified, the volume    |
+|                          |                         |status must be           |
+|                          |                         |``available``, and the   |
+|                          |                         |volume attach_status     |
+|                          |                         |must be ``detached``.    |
++--------------------------+-------------------------+-------------------------+
+|next                      |xsd:anyURI               |Moves to the next        |
 |                          |                         |metadata item.           |
 +--------------------------+-------------------------+-------------------------+
-|previous                  |xsd:anyURI *(Required)*  |Moves to the previous    |
+|previous                  |xsd:anyURI               |Moves to the previous    |
 |                          |                         |metadata item.           |
 +--------------------------+-------------------------+-------------------------+
 

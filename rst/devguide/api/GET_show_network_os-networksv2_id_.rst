@@ -75,15 +75,15 @@ This table shows the body parameters for the response:
 +--------------------------+-------------------------+-------------------------+
 |Name                      |Type                     |Description              |
 +==========================+=========================+=========================+
-|network                   |object *(Required)*      |A container of network   |
+|network                   |object                   |A container of network   |
 |                          |                         |details.                 |
 +--------------------------+-------------------------+-------------------------+
-|cidr                      |xsd:string *(Required)*  |The CIDR for an isolated |
+|cidr                      |xsd:string               |The CIDR for an isolated |
 |                          |                         |network.                 |
 +--------------------------+-------------------------+-------------------------+
-|id                        |xsd:string *(Required)*  |The network ID.          |
+|id                        |xsd:string               |The network ID.          |
 +--------------------------+-------------------------+-------------------------+
-|label                     |xsd:string *(Required)*  |The name of the network. |
+|label                     |xsd:string               |The name of the network. |
 |                          |                         |ServiceNet is labeled as |
 |                          |                         |private and PublicNet is |
 |                          |                         |labeled as public in the |
